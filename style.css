@@ -1,0 +1,165 @@
+html,
+body {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-family: "Oswald", sans-serif;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+body {
+  background-color: rgb(255, 34, 126);
+  overflow: hidden;
+}
+
+/* code by: Hans Amoguis
+
+  Shout out to Leandre Lara
+*/
+
+#container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: whitesmoke;
+  padding-top: 10vh;
+  gap: 2vw;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.26);
+  height: 40vh;
+  animation: enterTop 1.25s 1.5s both ease-out;
+}
+
+#container div h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.4rem;
+  color: rgb(255, 34, 126);
+  box-shadow: 0px 2px 4px black inset;
+  padding: 16px 24px;
+  background-color: rgb(241, 241, 241);
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40vw;
+  position: relative;
+}
+
+#btn_container {
+  display: flex;
+  justify-content: center;
+  gap: 1vw;
+}
+
+button,
+#done {
+  width: 112px;
+  height: auto;
+  border-radius: 1vh;
+  outline: none;
+  border: 4px solid rgba(255, 255, 255, 0);
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  aspect-ratio: 7/4;
+}
+button:hover {
+  cursor: pointer;
+  border: 4px solid rgb(255, 34, 126);
+}
+
+#yes,
+#click_Btn {
+  background-color: rgb(255, 81, 139);
+  color: whitesmoke;
+  transition: transform 1.5s 0.25s ease-in-out;
+}
+#yes:hover,
+#click_Btn:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.753);
+  background-color: rgb(255, 60, 125);
+}
+#yes:active {
+  transform: scale(1);
+}
+
+#no {
+  background-color: rgb(15, 15, 15);
+  color: whitesmoke;
+  position: relative;
+}
+#no:hover {
+  background-color: rgb(32, 32, 32);
+}
+#no:active,
+#click_me2:active,
+#done:active,
+a {
+  transform: scale(0.9);
+}
+#click_me2:hover,
+#done:hover {
+  background-color: rgb(223, 223, 223);
+}
+#click_Btn {
+  height: 48px;
+  width: 112px;
+  display: none;
+}
+
+#container2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 15vh;
+  animation: enterTop 1.25s both ease-out;
+  top: 4vh;
+}
+
+#wrapper2 {
+  aspect-ratio: 5/3;
+  border: 4px solid whitesmoke;
+  border-radius: 48px;
+  width: 1000px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.445);
+  background-image: url(https://img.freepik.com/free-vector/flat-valentine-s-day-background_23-2149243243.jpg?w=1380&t=st=1707645343~exp=1707645943~hmac=6430038f9acb1779a17a70e933470b4c9f754771ece11724a1259571b0653b45);
+  background-size: cover;
+}
+
+#click_me2 {
+  position: absolute;
+  top: 70vh;
+}
+#done {
+  position: absolute;
+  top: 80vh;
+  display: none;
+  animation: enterBottom 2s both ease-in-out;
+}
+
+@keyframes enterTop {
+  0% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes enterBottom {
+  0% {
+    transform: translateY(50vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
